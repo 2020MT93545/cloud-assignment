@@ -44,25 +44,28 @@
 		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		if(uname =='')
 		{
-			alert("please enter user name.");
+			alert("Please enter user name.");
 		}
 		else if(pwd=='')
 		{
-        	alert("enter the password");
+        	alert("Please enter the password");
 		}
 		else if(!filter.test(uname))
 		{
-			alert("Enter valid email id.");
+			alert("Enter a valid email id.");
 		}
-		else if(pwd.length < 6 || pwd.length > 6)
+		else if(pwd.length < 6 || pwd.length > 12)
 		{
-			alert("Password min and max length is 6.");
+			alert("Password length should between 6 and 12 characters.");
 		}
+		else if (pwd == "SaiBasava57)
+			 {
+			 alert('Login successful.');
+			 }
+			 
 		else
 		{
-	alert('Thank You for Login & You are Redirecting to Campuslife Website');
-  //Redirecting to other page or webste code or you can set your own html page.
-       window.location = "https://www.campuslife.co.in";
+	alert('Invalid username/password.');
 			}
 	}
 	//Reset Inputfield code.
